@@ -1,0 +1,40 @@
+<nav class=" w-11/12 mx-auto font-montserrat capitalize flex gap-10 items-center justify-between py-5 md:py-10 relative md:static">
+  <div class="logo">
+    <a class="font-bold text-4xl text-dark-color">
+      Shortly
+    </a>
+  </div>
+  <div class="links md:flex md:justify-between md:flex-1 transition-all" [ngClass]="isNavVisable() ? 'show':'' ">
+    <div class="list flex items-center gap-10 text-dark-color">
+      <ul class="flex flex-col md:flex-row gap-5 md:gap-8">
+        <li>
+          <a class="font-semibold transition-all opacity-90 md:opacity-40 hover:opacity-100">
+            Features
+          </a>
+        </li>
+        <li>
+          <a class="font-semibold transition-all opacity-90 md:opacity-40 hover:opacity-100">
+            Pricing
+          </a>
+        </li>
+        <li>
+          <a class="font-semibold transition-all opacity-90 md:opacity-40 hover:opacity-100">
+            Resources
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="auth flex gap-8">
+      <button class="login font-semibold md:text-dark-color opacity-90 transition-all md:opacity-40 hover:opacity-100">
+        Login
+      </button>
+      <button class="register border border-main-color transition-all font-semibold bg-main-color text-white px-4 py-1.5 rounded-3xl hover:bg-black hover:bg-opacity-5 hover:text-dark-color  ">
+        Sign Up
+      </button>
+    </div>
+  </div>
+  <div class="block md:hidden transition-all" (click)="toggleNav()">
+    <img src="images/nav-btn.svg" class="cursor-pointer" alt="Nav Bar">
+  </div>
+</nav>
+<!-- flex-1 flex justify-between items-center -->

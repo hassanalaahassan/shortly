@@ -1,0 +1,55 @@
+a{
+  cursor: pointer;
+}
+@media (max-width:768px) {
+  .links{
+    position: absolute;
+    background-color: #3A3053;
+    top: 100%;
+    left: 110%;
+    width: 100%;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    transition: all .4s ease-in-out;
+    z-index: 1000;
+    a{
+      color: #fff;
+      transition: all .4s ease-in-out;
+
+    }
+    .list{
+      margin-bottom: 20px;
+      transition: all .4s ease-in-out;
+
+      li{
+        text-align: center;
+        transition: all .4s ease-in-out;
+
+      }
+    }
+    .auth{
+      border-top: 1px solid #fff;
+      flex-direction: column;
+      gap:20px;
+      width: 80%;
+      padding-top: 20px;
+      transition: all .4s ease-in-out;
+
+    }
+    button{
+      width: 100%;
+      margin: 0 auto;
+      color: #fff;
+      transition: all .4s ease-in-out;
+
+    }
+  }
+}
+
+.links.show{
+  left: 0%;
+}
