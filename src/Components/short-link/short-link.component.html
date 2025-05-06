@@ -8,8 +8,16 @@
     <app-loader/>
   }
   </button>
-  <p class="text-main-color font-montserrat text-lg font-semibold col-span-full mt-4 sm:mt-6 md:mt-8 lg:mt-10" *ngIf="shortUrl && !hasError">
-    {{shortUrl}}
+</div>
+<div class="text-dark-color flex items-center justify-between text-lg font-semibold col-span-full pt-24 md:pt-20 w-11/12 mx-auto" >
+  <p class="link font-mono">
+    Shorter One :
+    <a [href]="shortUrl" class="transition-all border-b-2 border-transparent hover:border-violet-900" target="_blank">
+        {{shortUrl}}
+    </a>
   </p>
+  <span class="copy cursor-pointer" (click)="copyToClipboard(shortUrl)">
+    <img src="images/copy.svg" alt="copy">
+  </span>
 </div>
 

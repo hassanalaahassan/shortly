@@ -49,7 +49,9 @@ export class ShortLinkComponent implements OnInit,OnDestroy {
       }
     })
   }
-
+  copyToClipboard(link:string):void{
+    navigator.clipboard.writeText(link)
+  }
 
   ngOnDestroy(): void {
     this.shortLinkService.loaderShow.unsubscribe()
