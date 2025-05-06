@@ -3,24 +3,13 @@
 }
 h1{
   letter-spacing: 1px;
-  // line-height: 80px;
   text-transform: capitalize;
 }
-
-
+.shortLink{
+  z-index: 100001;
+}
 @media (min-width: 300px) and (max-width: 768px) {
-
-img{
-  min-width: 150%;
-  // right: -0px;
+  img{
+    min-width: 150%;
+  }
 }
-
-}
-// @media (min-width: 370px) and (max-width: 447px) {
-
-// img{
-//   // min-width: 120%;
-//   // right: -10px;
-// }
-
-// }

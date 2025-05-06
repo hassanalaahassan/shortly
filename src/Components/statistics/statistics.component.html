@@ -1,1 +1,24 @@
-<p>statistics works!</p>
+<section class="bg-[#EFF1F7] relative">
+  <app-short-link/>
+  <div class="statistics pt-24 md:pt-44 w-11/12 mx-auto">
+    <div class="sec-header">
+      <h2 class="text-3xl font-bold text-center text-dark-color mb-4">
+        Advanced Statistics
+      </h2>
+      <p class="text-center text-dark-color opacity-50">
+        Track how your links are performing across the web with
+      </p>
+      <p class="text-center text-dark-color opacity-50">
+        our advanced statistics dashboard.
+      </p>
+    </div>
+    <div class="cards grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-8 mt-16 md:mt-40 px-4 items-stretch">
+      @for (card of cardsData; track $index) {
+        <div [id]="'card'+$index" class="relative h-full">
+          <app-card [cardData]="card" />
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

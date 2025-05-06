@@ -1,1 +1,11 @@
-<p>card works!</p>
+<div class="card h-full bg-white relative pt-8 text-center md:text-start md:pt-14 p-6 lg:p-8 rounded-lg font-montserrat">
+  <div class="icon bg-dark-color w-fit p-5 rounded-full absolute top-0 left-1/2 md:left-6 -translate-y-1/2 -translate-x-1/2 md:-translate-x-0">
+    <img [src]="cardData.icon" [alt]="cardData.title">
+  </div>
+  <h3 class="text-dark-color text-2xl font-bold mt-5 mb-2 lg:mb-4">
+    {{cardData.title}}
+  </h3>
+  <p class="text-dark-color opacity-50 lg:mb-3">
+    {{cardData.text}}
+  </p>
+</div>
