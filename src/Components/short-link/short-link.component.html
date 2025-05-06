@@ -1,6 +1,15 @@
 <div class="input bg-dark-color grid grid-cols-9 gap-2 py-4 px-8 md:py-8 md:px-12 w-11/12 mx-auto rounded-xl absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-  <input type="text" class="col-span-full sm:col-span-6 md:col-span-7 lg:col-span-8 py-3 px-5 font-montserrat text-dark-color border-none outline-none rounded-xl" placeholder="Shorten a link here..." >
-  <button class="bg-main-color col-span-full sm:col-span-3 md:col-span-2 lg:col-span-1 text-white font-montserrat font-semibold rounded-xl capitalize cursor-pointer py-3 mt-2 sm:mt-0 sm:py-0">
-    Shorten it!
+  <input [(ngModel)]="url" type="text" class="col-span-full sm:col-span-6 md:col-span-7 lg:col-span-8 py-3 px-5 font-montserrat text-dark-color border-2 outline-none rounded-xl transition-all" [ngClass]="hasError? ' border-red-500' :'border-transparent'" placeholder="Shorten a link here..." >
+  <button (click)="getshortUrl()" class="bg-main-color col-span-full sm:col-span-3 md:col-span-2 lg:col-span-1 text-white font-montserrat font-semibold rounded-xl capitalize cursor-pointer py-3 mt-2 sm:mt-0 sm:py-0">
+    @if (!showLoader) {
+      <span>Shorten it!</span>
+    }
+    @else{
+    <app-loader/>
+  }
   </button>
+  <p class="text-main-color font-montserrat text-lg font-semibold col-span-full mt-4 sm:mt-6 md:mt-8 lg:mt-10" *ngIf="shortUrl && !hasError">
+    {{shortUrl}}
+  </p>
 </div>
+
