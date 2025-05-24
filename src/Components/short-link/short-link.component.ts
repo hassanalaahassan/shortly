@@ -3,11 +3,12 @@ import { ShortlinkService } from '../../Services/shortlink.service';
 import { FormsModule } from '@angular/forms';
 import { LoaderComponent } from "../../shared/loader/loader.component";
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-short-link',
   standalone: true,
-  imports: [FormsModule, LoaderComponent,CommonModule],
+  imports: [FormsModule, LoaderComponent,CommonModule,TranslateModule],
   templateUrl: './short-link.component.html',
   styleUrl: './short-link.component.scss'
 })

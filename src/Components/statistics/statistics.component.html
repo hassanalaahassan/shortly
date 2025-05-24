@@ -3,18 +3,18 @@
   <div class="statistics pt-14  sm:pt-28 w-11/12 mx-auto">
     <div class="sec-header">
       <h2 class="text-3xl font-bold text-center text-dark-color mb-4">
-        Advanced Statistics
+        {{'statisticsSection.title' | translate}}
       </h2>
       <p class="text-center text-dark-color opacity-50">
-        Track how your links are performing across the web with
+        {{'statisticsSection.description1' | translate}}
       </p>
       <p class="text-center text-dark-color opacity-50">
-        our advanced statistics dashboard.
+        {{'statisticsSection.description2' | translate}}
       </p>
     </div>
     <div class="cards grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-8 mt-16 md:mt-40 px-4 items-stretch">
       @for (card of cardsData; track $index) {
-        <div [id]="'card'+$index" class="relative h-full">
+        <div [id]="'card'+$index" class="relative h-full"  [ngClass]="translateAppServices.direction() === 'ltr' ? 'after:left-1/2 md:after:left-full after:-translate-x-1/2  md:after:-translate-x-0':'after:right-1/2 md:after:right-full after:translate-x-1/2 md:after:translate-x-0'">
           <app-card [cardData]="card" />
         </div>
       }

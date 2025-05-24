@@ -14,7 +14,6 @@ section{
   height: 6px;
   background-color: var(--main-color);
   top: calc(50% + 35px);
-  left: 100%;
 }
 #card1::after{
   content: '';
@@ -23,7 +22,6 @@ section{
   height: 6px;
   background-color: var(--main-color);
   top: calc(50%);
-  left: 100%;
 }
 @media (max-width:768px){
   #card0{
@@ -36,15 +34,10 @@ section{
     width: 6px;
     height: 100%;
     top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
   }
   #card1::after{
     width: 6px;
     height: 100%;
     top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
   }
-
 }

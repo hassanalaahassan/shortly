@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+
+import { TransAppService } from './../Services/trans-app.service';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +10,12 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'short-app';
+  translateAppService = inject(TransAppService)
+
+  ngOnInit(): void {
+    this.translateAppService.setDefault()
+  }
+
 }

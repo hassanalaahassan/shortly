@@ -2,16 +2,16 @@
   <div class="hero grid grid-cols-2 w-11/12 mx-auto">
     <div class="text-center md:text-start col-span-full md:col-span-1 h-full sm:content-center items-end font-montserrat">
       <h1 class="mb-3 text-3xl sm:text-5xl lg:text-7xl font-bold text-dark-color order-last md:order-first">
-        More than just shorter links
+        {{'home.title' | translate}}
       </h1>
-      <p class="text-sm sm:text-xl lg:text-2xl font-medium opacity-35 text-dark-color">Build your brand's recognition and get detailed</p>
-      <p class="text-sm sm:text-xl lg:text-2xl font-medium opacity-35 text-dark-color">insights on how your links are performing</p>
+      <p class="text-sm sm:text-xl lg:text-2xl font-medium opacity-35 text-dark-color">{{'home.subtitle1'|translate}}</p>
+      <p class="text-sm sm:text-xl lg:text-2xl font-medium opacity-35 text-dark-color">{{'home.subtitle2' | translate }}</p>
       <button class="mt-5 md:mt-7 lg:mt-10 bg-main-color py-2 px-6 rounded-3xl text-white font-semibold ">
-        Get Started
+        {{'home.button' | translate }}
       </button>
     </div>
     <div class="col-span-full md:col-span-1 order-first md:order-last mb-3 sm:mb-0 h-full">
-      <img src="images/illustration-working.svg" class="relative min-w-[120%] md:-right-24"  alt="working">
+      <img src="images/illustration-working.svg" class="relative min-w-[120%] md:left-0" [ngClass]="translateAppService.direction() === 'ltr' ? '' :'left-32 ' "  alt="working">
     </div>
     </div>
 </section>
